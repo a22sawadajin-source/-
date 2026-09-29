@@ -1,0 +1,44 @@
+{
+  "_note": "ASSUMPTION と書かれた値は公式確認済みではない仮定。verified が false の間は合格判定を出さない。",
+  "symbol": "BTC_USDT",
+  "initial_capital_usdt": 66.67,
+  "initial_capital_usdt_note": "ASSUMPTION: 1万円 ÷ 150円/USDT。実際の換算時刻・レートは要確認",
+  "strategy": {
+    "ema_period_4h": 200,
+    "entry_n": 20,
+    "exit_n": 10,
+    "atr_n": 20,
+    "atr_mult": 2.0,
+    "max_hold_bars": 72
+  },
+  "risk": {
+    "risk_per_trade": 0.02,
+    "max_effective_leverage": 3.0,
+    "isolated_leverage_setting": 3.0,
+    "maintenance_margin_rate": 0.005,
+    "stop_within_liq_fraction": 0.5,
+    "halt_drawdown": 0.5,
+    "note": "maintenance_margin_rate / stop_within_liq_fraction は ASSUMPTION（仕様は『十分手前』とだけ記載）"
+  },
+  "contract": {
+    "contract_size_btc": 0.0001,
+    "min_vol": 1,
+    "vol_step": 1,
+    "verified": false,
+    "note": "ASSUMPTION: MEXC公式の契約情報で未確認。verified=true にするまで『実行可能性未確認』"
+  },
+  "costs": {
+    "taker_fee": 0.0006,
+    "slippage": 0.0005,
+    "verified": false,
+    "note": "ASSUMPTION: 片道率。過去の実手数料・スリッページは未確認"
+  },
+  "cost_stress": { "fee_mult": 2.0, "slippage_mult": 3.0 },
+  "pass_criteria": {
+    "min_trades": 30,
+    "max_drawdown": 0.5,
+    "note": "min_trades は仕様に数値がないため ASSUMPTION。未使用期間評価前に固定すること"
+  },
+  "periods": { "dev": null, "mid": null, "test": null,
+    "note": "[開始UTC, 終了UTC] を ISO 形式で。データ範囲確認後に人が固定する" }
+}
