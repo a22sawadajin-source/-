@@ -1,0 +1,18 @@
+{
+  "OclCheck": {
+    "Adapters": [
+      {
+        "devID": 39544,
+        "venID": 32902,
+        "devName": "Intel(R) UHD Graphics",
+        "strDrvVer": "30.0.101.1338",
+        "strDrvDate": "20220120000000.000000-000",
+        "clCVersion": "OpenCL C 1.2",
+        "clDevVersion": "OpenCL 3.0 NEO",
+        "clDrvVersion": "30.0.101.1338",
+        "checkResult": 11,
+        "checked": 1
+      }
+    ]
+  }
+}
